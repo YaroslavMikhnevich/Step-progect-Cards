@@ -1,0 +1,53 @@
+@import './abstracts/mixins';
+@import './abstracts/reset';
+@import './abstracts/variables';
+@import './components/_header';
+@import './components/__visit-table';
+@import './components/_filter-section';
+@import './components/_visit-card';
+@import './components/_create-visit-card';
+@import './components/_login-window';
+@import './components/_error-message';
+
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 320px;
+    font-size: 14px;
+    line-height: 14px;
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+        display: none;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.prelog-block{
+    position: relative;
+    height: 92vh;
+    background-image: url("/dist/img/prelog-background1.jpg");
+
+    background-position-y: 55%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+  &::after{
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 92vh;
+    background-color: rgba(0, 0, 0, 0.198);
+    z-index: 2;
+   }
+}

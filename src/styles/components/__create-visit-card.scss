@@ -1,0 +1,153 @@
+.modal-window {
+    position: absolute;
+    border: 0;
+    width: 500px;
+    height: 35%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    z-index: 4;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s, top 0.4s;
+
+
+    .modal-window-content-box {
+        position: relative;
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    &__title {
+        font-size: 20px;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        margin-top: 10px
+    }
+
+    select {
+        width: 100%;
+        margin-top: 10px
+    }
+
+
+    &__submit-block {
+        width: 70%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+        input {
+            display: block;
+            margin: 0 auto;
+            color: white;
+            border-radius: 5px;
+            border: 0;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 5px;
+            height: 30px;
+
+
+        }
+
+        &--confirm {
+            background-color: rgb(0, 204, 58);
+            display: none;
+        }
+
+        &--confirm:hover {
+            background-color: rgb(0, 182, 52);
+        }
+
+        &--close {
+            background-color: rgb(217, 222, 227);
+        }
+
+        &--close:hover {
+            background-color: rgb(156, 161, 166);
+        }
+
+
+
+    }
+
+    .modal-window__main-visit-info {
+        display: none;
+
+    }
+
+    .modal-window__additional-info {
+        display: none;
+
+
+
+    }
+
+    .modal-window__submit-block--confirm {
+        display: none;
+    }
+}
+
+
+.open-modal {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    scale: 100%;
+}
+
+
+.def-option-priority{
+color: grey;
+
+}
+
+
+.input-box-modal{
+    display: flex;
+          position: relative;
+          align-items: center;
+          width: 100%;
+          height: 30px;
+          margin-bottom: 25px;
+        input {
+          
+          background: #fff;
+          padding: 10px;
+          width: 100%;
+          margin: 0 auto;
+          display: inline-block;
+          /* закруглим края у поля ввода */
+          border-radius: 11px;
+        }
+  
+        select {
+          
+          background: #fff;
+          padding: 10px;
+          width: 100%;
+          margin: 0 auto;
+          display: inline-block;
+          /* закруглим края у поля ввода */
+          border-radius: 11px;
+        }
+        
+        label {
+          position: absolute;
+          /* смещение относительно родительского элемента 10px вверх от верхнего края и   10px влево */
+          top: -10px;
+          left: 20px;
+          background: #fff;
+          padding: 0 5px;
+        }
+    }  

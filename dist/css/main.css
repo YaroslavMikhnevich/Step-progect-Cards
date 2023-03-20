@@ -1,0 +1,498 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: rgba(4, 119, 250, 0.082);
+}
+.header .content-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  height: 8vh;
+  padding: 0 10px;
+}
+.header__logo {
+  color: rgb(4, 119, 250);
+}
+.header__logo svg {
+  width: 50px;
+  height: 50px;
+}
+.header__button-block button {
+  width: 82px;
+  height: 32px;
+  border: 1px solid rgb(4, 119, 250);
+  background-color: rgba(4, 119, 250, 0.082);
+  color: rgb(4, 119, 250);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.header__button-block button:hover {
+  background-color: rgb(4, 119, 250);
+  color: white;
+}
+.header__button-block--create-visit {
+  display: none;
+}
+
+.visit-table {
+  width: 100%;
+  height: 80vh;
+  border-radius: 15px;
+  box-shadow: inset 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: rgba(0, 107, 255, 0.1019607843);
+  align-content: flex-start;
+  position: relative;
+}
+.visit-table__message {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  text-transform: uppercase;
+  color: rgba(128, 128, 128, 0.4901960784);
+}
+
+.filter-section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0 auto;
+}
+.filter-section .filter-section-container {
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-box {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 50%;
+  height: 30px;
+}
+.input-box input {
+  background: #fff;
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+  display: inline-block;
+  /* закруглим края у поля ввода */
+  border-radius: 11px;
+}
+.input-box select {
+  background: #fff;
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+  display: inline-block;
+  /* закруглим края у поля ввода */
+  border-radius: 11px;
+}
+.input-box label {
+  position: absolute;
+  /* смещение относительно родительского элемента 10px вверх от верхнего края и   10px влево */
+  top: -10px;
+  left: 14%;
+  background: #fff;
+  padding: 0 5px;
+}
+
+.filter-section__item {
+  display: inline-block;
+  background: #fff;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  /* закруглим края у поля ввода */
+  border-radius: 11px;
+}
+
+.visit-container {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  width: 250px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 10px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.visit-container:hover {
+  scale: 105%;
+}
+.visit-container .visit-content-box__urgenest {
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.visit-container .visit-content-box {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.visit-container .visit-content-box p {
+  margin-bottom: 7px;
+}
+.visit-container .visit-content-box__more-info-block {
+  display: none;
+}
+.visit-container .visit-content-box__more-info-block-close {
+  display: block;
+}
+.visit-container .visit-content-box__button-block {
+  margin-top: 10px;
+}
+.visit-container .visit-content-box__button-block button {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.visit-container .visit-content-box__button-block--edit {
+  background-color: rgb(0, 204, 58);
+}
+.visit-container .visit-content-box__button-block--edit:hover {
+  background-color: rgb(0, 182, 52);
+}
+.visit-container .visit-content-box .visit-content-box__button-block--close {
+  background-color: rgb(217, 222, 227);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 50%;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+.visit-container .visit-content-box .visit-content-box__button-block--close svg {
+  scale: 150%;
+}
+.visit-container .visit-content-box .visit-content-box__button-block--close:hover {
+  background-color: rgb(156, 161, 166);
+}
+
+.visit-content-box__button-block--more {
+  background-color: rgb(75, 75, 75);
+}
+
+.visit-content-box__button-block--more:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.modal-window {
+  position: absolute;
+  border: 0;
+  width: 500px;
+  height: 35%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  z-index: 4;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s, top 0.4s;
+}
+.modal-window .modal-window-content-box {
+  position: relative;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.modal-window__title {
+  font-size: 20px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.modal-window input {
+  width: 100%;
+  margin-top: 10px;
+}
+.modal-window select {
+  width: 100%;
+  margin-top: 10px;
+}
+.modal-window__submit-block {
+  width: 70%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-window__submit-block input {
+  display: block;
+  margin: 0 auto;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 5px;
+  height: 30px;
+}
+.modal-window__submit-block--confirm {
+  background-color: rgb(0, 204, 58);
+  display: none;
+}
+.modal-window__submit-block--confirm:hover {
+  background-color: rgb(0, 182, 52);
+}
+.modal-window__submit-block--close {
+  background-color: rgb(217, 222, 227);
+}
+.modal-window__submit-block--close:hover {
+  background-color: rgb(156, 161, 166);
+}
+.modal-window .modal-window__main-visit-info {
+  display: none;
+}
+.modal-window .modal-window__additional-info {
+  display: none;
+}
+.modal-window .modal-window__submit-block--confirm {
+  display: none;
+}
+
+.open-modal {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  scale: 100%;
+}
+
+.def-option-priority {
+  color: grey;
+}
+
+.input-box-modal {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 25px;
+}
+.input-box-modal input {
+  background: #fff;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+  display: inline-block;
+  /* закруглим края у поля ввода */
+  border-radius: 11px;
+}
+.input-box-modal select {
+  background: #fff;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+  display: inline-block;
+  /* закруглим края у поля ввода */
+  border-radius: 11px;
+}
+.input-box-modal label {
+  position: absolute;
+  /* смещение относительно родительского элемента 10px вверх от верхнего края и   10px влево */
+  top: -10px;
+  left: 20px;
+  background: #fff;
+  padding: 0 5px;
+}
+
+.modal-background {
+  width: 120vW;
+  height: 120vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.67);
+  z-index: 3;
+}
+
+.popup {
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  transition: transform 0.4s, top 0.4s;
+  z-index: 3;
+}
+.popup h2 {
+  font-size: 38px;
+  margin: 30px 0 10px;
+}
+.popup .inputfields {
+  margin-top: 50px;
+}
+.popup .inputfields input {
+  margin: 5px;
+}
+.popup button {
+  width: 100%;
+  margin-top: 40px;
+  padding: 10px 0;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #6fd649;
+  color: #fff;
+}
+
+.open-popup {
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+}
+
+.error-block {
+  color: red;
+  border: 1px red solid;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  display: none;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  min-width: 320px;
+  font-size: 14px;
+  line-height: 14px;
+}
+body .container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.prelog-block {
+  position: relative;
+  height: 92vh;
+  background-image: url("/dist/img/prelog-background1.jpg");
+  background-position-y: 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.prelog-block::after {
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 92vh;
+  background-color: rgba(0, 0, 0, 0.198);
+  z-index: 2;
+}

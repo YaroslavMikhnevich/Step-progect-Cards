@@ -1,0 +1,66 @@
+.filter-section {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+
+
+    .filter-section-container {
+      margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+.input-box{
+  display: flex;
+        position: relative;
+        align-items: center;
+   
+        width: 50%;
+        height: 30px;
+      input {
+        
+        background: #fff;
+        padding: 10px;
+        width: 80%;
+        margin: 0 auto;
+        display: inline-block;
+        /* закруглим края у поля ввода */
+        border-radius: 11px;
+      }
+
+      select {
+        
+        background: #fff;
+        padding: 10px;
+        width: 80%;
+        margin: 0 auto;
+        display: inline-block;
+        /* закруглим края у поля ввода */
+        border-radius: 11px;
+      }
+      
+      label {
+        position: absolute;
+        /* смещение относительно родительского элемента 10px вверх от верхнего края и   10px влево */
+        top: -10px;
+        left: 14%;
+        background: #fff;
+        padding: 0 5px;
+      }
+
+
+    }
+
+    .filter-section__item{
+      display: inline-block;
+      background: #fff;
+      width: 80%;
+      margin: 0 auto;
+      padding: 10px;
+      /* закруглим края у поля ввода */
+      border-radius: 11px;
+    }

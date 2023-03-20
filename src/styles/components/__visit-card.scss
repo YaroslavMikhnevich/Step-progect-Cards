@@ -1,0 +1,100 @@
+ .visit-container {
+     position: relative;
+     overflow: hidden;
+     border: 0;
+     width: 250px;
+     height: -webkit-fit-content;
+     height: -moz-fit-content;
+     height: fit-content;
+     margin: 10px;
+     background-color: white;
+     border-radius: 15px;
+     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+     cursor: pointer;
+
+     &:hover{
+        scale: 105%;
+     }
+
+     .visit-content-box__urgenest {
+         width: 100%;
+         text-align: center;
+         height: 30px;
+         line-height: 30px;
+     }
+
+     .visit-content-box {
+
+         width: 80%;
+         margin: 0 auto;
+         padding: 10px 0;
+
+         p {
+             margin-bottom: 7px;
+         }
+
+         &__more-info-block{
+            display: none;
+         }
+         &__more-info-block-close{
+            display: block;
+         }
+
+         &__button-block {
+             margin-top: 10px;
+
+             button {
+                 width: 90%;
+                 display: block;
+                 margin: 0 auto;
+                 margin-bottom: 5px;
+                 color: white;
+                 border-radius: 5px;
+                 border: 0;
+                 text-transform: uppercase;
+                 cursor: pointer;
+             }
+
+             &--edit {
+                 background-color: rgb(0, 204, 58);
+             }
+
+             &--edit:hover {
+                 background-color: rgb(0, 182, 52);
+             }
+
+         }
+
+         .visit-content-box__button-block--close {
+             background-color: rgb(217, 222, 227);
+             position: absolute;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             width: 20px;
+             height: 20px;
+             border: 0;
+             border-radius: 50%;
+             top: 5px;
+             right: 10px;
+            cursor: pointer;
+             svg {
+                 scale: 150%;
+             }
+         }
+
+         .visit-content-box__button-block--close:hover {
+             background-color: rgb(156, 161, 166);
+         }
+
+     }
+
+ }
+
+ .visit-content-box__button-block--more{
+    background-color: rgb(75, 75, 75);
+ }
+
+ .visit-content-box__button-block--more:hover{
+    background-color: rgb(0, 0, 0);
+ }
