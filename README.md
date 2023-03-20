@@ -5,3 +5,5 @@
 логін для входу: araksmiskarova@gmail.com, пароль: 5555.
 
 запустити gulp : gulp dev
+
+GitHub Pages: https://yaroslavmikhnevich.github.io/Step-progect-Cards/
